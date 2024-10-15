@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="/image/logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="personal-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        #img-container{
+            border: 2px dotted black;
+            position: absolute;
+            overflow: hidden;
+            width: 31%;
+            height: 43%;
+            left: 67%;
+            top: 17%;
+        }
+        #photo{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        #name{
+            all: unset;
+            position: absolute;
+            width: 50%;
+            height: 9%;
+            left: 10%;
+            top: 20%;
+            font-size: 40px;
+            color: red;
+        }
+        #class{
+            all: unset;
+            position: absolute;
+            width: 15%;
+            height: 8%;
+            left: 17%;
+            top: 42%;
+        }
+        #section{
+            all: unset;
+            position: absolute;
+            width: 15%;
+            height: 8%;
+            left: 45%;
+            top: 42%;
+        }
+        #subject{
+            all: unset;
+            position: absolute;
+            width: 50%;
+            height: 8%;
+            left: 20%;
+            top: 62%;
+        }
+        #school{
+            all: unset;
+            position: absolute;
+            width: 55%;
+            height: 9%;
+            left: 10%;
+            top: 82%;
+        }
+        #image-section > h2 {
+            text-align: left;
+            font-style: normal;
+            font-weight: bold;
+            color: black;
+            display: flex;
+            align-items: center;
+            font-size: 90%;
+        }
+
+        @media screen and (max-width:400px) {
+            #image-section > h2{
+                font-size: 2vw;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <nav id="header">
+        <a href="#" class="logo-section"><img src="/./image/logo.png" alt="logo" class="logo"><h2>DreamikAI</h2></a>
+        <div id="menu"><img src="/image/menu.png" alt="" id="menubar"></div>
+        <div id="nav">
+            <ul id="navbar">
+                <li><a href="/index.html" class="active">Go To Shop</a></li>
+                <li>
+                    <a href="#" id="other_product" class="active">Other Product</a>
+                    <ul id="list_products">
+                        <li><a href="/NameSlip/Name_Slip.html">Name Slip</a></li>
+                        <li><a href="/BagTag/bagtag.html">Bag Tag</a></li>
+                        <li><a href="/Poster/Poster.html">Poster</a></li>
+                        <li><a href="/Sticker/Sticker.html">Sticker</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="nav1">
+        <ul id="navbar">
+            <li><a href="/index.html" class="active">Go To Shop</a></li>
+            <li>
+                <a href="#" id="other_product_m" class="active">Other Product</a>
+                <ul id="list_products_m">
+                    <li><a href="/NameSlip/Name_Slip.html">Name Slip</a></li>
+                    <li><a href="/BagTag/bagtag.html">Bag Tag</a></li>
+                    <li><a href="/Poster/Poster.html">Poster</a></li>
+                    <li><a href="/Sticker/Sticker.html">Sticker</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="label-custom">
+        <div id="image">
+            <div id="image-section">
+                <img src="" alt="" id="labelimg">
+                <img src="/image/DreamikAIComics-Label-Watermark-Mask-Rectangle-v1-HD(1080x1920 px).png" alt="" id="cmp_watermark">
+                <div id="img-container">
+                    <img src="" alt="" id="photo">
+                </div>
+                <h2 id="name" class="label-text">Enter Your Name</h2>
+                <h2 id="class" class="label-text"></h2>
+                <h2 id="section" class="label-text"> </h2>
+                <h2 id="subject" class="label-text"></h2>
+                <h2 id="school" class="label-text">Enter Your School Name</h2>
+            </div>
+            <h4 id="labeldetails"></h4>
+        </div>
+        <div id="personalize">
+            <div id="personalize-image">
+                <label for="uploadimg" id="selectimg" class="btn">select image</label>
+                <input type="file" placeholder="upload image" id="uploadimg">
+                <button class="editbtn" id="editbtn0"><i class="fas fa-user-edit"></i></button>
+                <div id="editimg">
+                    <h3>Edit Photo</h3>
+                    <button id="deleteButton" onclick="tranform('del')"><i class="fa-solid fa-trash"></i></button>
+                    <button id="zoomInButton" onclick="tranform('zoomin')"><i class="fa fa-search-plus" aria-hidden="true"></i></i></button>
+                    <button id="zoomOutButton" onclick="tranform('zoomout')"><i class="fa fa-search-minus" aria-hidden="true"></i></button>
+                    <button id="rotateLeftButton" onclick="tranform('rleft')"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button id="rotateRightButton" onclick="tranform('rright')"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button id="flipHorizontalButton" onclick="tranform('fliph')"><i class="fas fa-arrows-alt-h"></i></button>
+                    <label for=""></label>
+                    <button id="flipVerticalButton" onclick="tranform('flipv')"><i class="fas fa-arrows-alt-v"></i></button>
+                    <button id="up" onclick="move('up')" ><i class="fa-solid fa-arrow-up"></i></button>
+                    <button id="down" onclick="move('down')"><i class="fa-solid fa-arrow-down"></i></button>
+                    <button id="left" onclick="move('left')" ><i class="fa-solid fa-arrow-left"></i></button>
+                    <button id="right" onclick="move('right')"><i class="fa-solid fa-arrow-right"></i></button>
+                    <button id="crop"><i class="fa-solid fa-crop"></i></button>
+                    <label for="contrast">Contrast:<input type="range" id="contrast" min="50" max="300" value="0"><h4 id="contrastvalue">0</h4></label>
+                    <label for="brightness">Brightness:<input type="range" id="brightness" min="50" max="200" value="100"><h4 id="brightnessvalue">100</h4></label>
+                    <label for="imgColorPicker">Change Image Background Color :<input type="color" id="imgColorPicker" value="#000000"></label>
+                    <label for="circle" id="circlelabel">circle border<input type="checkbox" id="circle"></label>
+                    <label for="imgborder" id="borderlabel">image border<input type="checkbox" id="imgborder"></label>
+                    <button id="bg">remove BackGround</button>
+                </div>
+                <div id="edittext">
+                    <div class="ed">
+                        <input type="text" placeholder="Name" id="stdname" class="input">
+                        <button class="editbtn" id="editbtn1"><i class="fas fa-user-edit"></i></button>
+                        <div class="edititem" id="edititem1">
+                            <label for="textColorPicker">Pick Text color <input type="color" id="textColorPicker" value="#000000" oninput="fontcolorchange('textColorPicker','name')"></label>
+                            <label for="textSizePicker" class="textsize">Text Size 
+                                <button type="button" id="textminus1" onclick="textminus('textSizePicker','name')"><i class="fa-solid fa-minus"></i></button>
+                                <input type="text" placeholder="26" id="textSizePicker" value=26 oninput="textsize('textSizePicker','name')">
+                                <button id="textminus1" onclick="textplus('textSizePicker','name')"><i class="fa-solid fa-plus"></i></button></label>
+                            <button id="fleft" onclick="fmove('left','name')"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button id="fright" onclick="fmove('right','name')"><i class="fa-solid fa-arrow-right"></i></button>
+                            <button id="fup" onclick="fmove('up','name')"><i class="fa-solid fa-arrow-up"></i></button>
+                            <button id="fdown" onclick="fmove('down','name')"><i class="fa-solid fa-arrow-down"></i></button>
+                            <label for="" id="fontstyle">Font Style 
+                                <button id="bold1" class="bold" onclick="fontstyle('name','bold','1')"><i class="fa-solid fa-bold"></i></button>
+                                <button id="italic1" class="italic" onclick="fontstyle('name','italic','1')"><i class="fa-solid fa-italic"></i></button>
+                            </label>
+                            <label for="fontStylePicker">Font Family       
+                                <select id="fontStylePicker" onclick="fontstyle2('fontStylePicker','name')" class="fontStylePicker">
+                                    <option value="Arial">Arial</option>
+                                    <option value="Helvetica">Helvetica</option>
+                                    <option value="Times New Roman">Times New Roman</option>
+                                    <option value="Times">Times</option>
+                                    <option value="Courier New">Courier New</option>
+                                    <option value="Courier">Courier</option>
+                                    <option value="Verdana">Verdana</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Palatino">Palatino</option>
+                                    <option value="Garamond">Garamond</option>
+                                    <option value="Bookman">Bookman</option>
+                                    <option value="Comic Sans MS">Comic Sans MS</option>
+                                    <option value="Trebuchet MS">Trebuchet MS</option>
+                                    <option value="Arial Black">Arial Black</option>
+                                    <option value="Impact">Impact</option>
+                                    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                                    <option value="Tahoma">Tahoma</option>
+                                    <option value="Geneva">Geneva</option>
+                                    <option value="Lucida Console">Lucida Console</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ed">
+                        <input type="text" placeholder="School Name" id="stdschool" class="input">
+                        <button class="editbtn" id="editbtn2"><i class="fas fa-user-edit"></i></button>
+                        <div class="edititem" id="edititem2">
+                            <label for="textColorPicker2">Pick Text color <input type="color" id="textColorPicker2" value="#000000" oninput="fontcolorchange('textColorPicker2','school')"></label>
+                            <label for="textSizePicker2" class="textsize">Text Size 
+                                <button type="button" id="textminus2" onclick="textminus('textSizePicker2','school')"><i class="fa-solid fa-minus"></i></button>
+                                <input type="text" placeholder="26" id="textSizePicker2" value=26 oninput="textsize('textSizePicker2','school')">
+                                <button id="textminus2" onclick="textplus('textSizePicker2','school')"><i class="fa-solid fa-plus"></i></button></label>
+                            <button id="fleft" onclick="fmove('left','school')"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button id="fright" onclick="fmove('right','school')"><i class="fa-solid fa-arrow-right"></i></button>
+                            <button id="fup" onclick="fmove('up','school')"><i class="fa-solid fa-arrow-up"></i></button>
+                            <button id="fdown" onclick="fmove('down','school')"><i class="fa-solid fa-arrow-down"></i></button>
+                            <label for="" id="fontstyle">Font Style 
+                                <button id="bold2" class="bold" onclick="fontstyle('school','bold','2')"><i class="fa-solid fa-bold"></i></button>
+                                <button id="italic2" class="italic" onclick="fontstyle('school','italic','2')"><i class="fa-solid fa-italic"></i></button>
+                            </label>
+                            <label for="fontStylePicker2">Font Family       
+                                <select id="fontStylePicker2" onclick="fontstyle2('fontStylePicker2','school')" class="fontStylePicker">
+                                    <option value="Arial">Arial</option>
+                                    <option value="Helvetica">Helvetica</option>
+                                    <option value="Times New Roman">Times New Roman</option>
+                                    <option value="Times">Times</option>
+                                    <option value="Courier New">Courier New</option>
+                                    <option value="Courier">Courier</option>
+                                    <option value="Verdana">Verdana</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Palatino">Palatino</option>
+                                    <option value="Garamond">Garamond</option>
+                                    <option value="Bookman">Bookman</option>
+                                    <option value="Comic Sans MS">Comic Sans MS</option>
+                                    <option value="Trebuchet MS">Trebuchet MS</option>
+                                    <option value="Arial Black">Arial Black</option>
+                                    <option value="Impact">Impact</option>
+                                    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                                    <option value="Tahoma">Tahoma</option>
+                                    <option value="Geneva">Geneva</option>
+                                    <option value="Lucida Console">Lucida Console</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>   
+                    <button id="extratext" class="btn">Other details</button>
+                    <div id="extradiv">
+                        <div class="ed">
+                            <input type="text" placeholder="Class" id="stdclass" class="input">
+                            <button class="editbtn" id="editbtn3"><i class="fas fa-user-edit"></i></button>
+                                <div class="edititem" id="edititem3">
+                                <label for="textColorPicker3">Pick Text color <input type="color" id="textColorPicker3" value="#000000" oninput="fontcolorchange('textColorPicker3','class')"></label>
+                                <label for="textSizePicker3" class="textsize">Text Size 
+                                    <button type="button" id="textminus3" onclick="textminus('textSizePicker3','class')"><i class="fa-solid fa-minus"></i></button>
+                                    <input type="text" placeholder="26" id="textSizePicker3" value=26 oninput="textsize('textSizePicker3','class')">
+                                    <button id="textminus3" onclick="textplus('textSizePicker3','class')"><i class="fa-solid fa-plus"></i></button></label>
+                                <button id="fleft" onclick="fmove('left','class')"><i class="fa-solid fa-arrow-left"></i></button>
+                                <button id="fright" onclick="fmove('right','class')"><i class="fa-solid fa-arrow-right"></i></button>
+                                <button id="fup" onclick="fmove('up','class')"><i class="fa-solid fa-arrow-up"></i></button>
+                                <button id="fdown" onclick="fmove('down','class')"><i class="fa-solid fa-arrow-down"></i></button>
+                                <label for="" id="fontstyle">Font Style 
+                                    <button id="bold3" class="bold" onclick="fontstyle('class','bold','3')"><i class="fa-solid fa-bold"></i></button>
+                                    <button id="italic3" class="italic" onclick="fontstyle('class','italic','3')"><i class="fa-solid fa-italic"></i></button>
+                                </label>
+                                <label for="fontStylePicker3">Font Family       
+                                    <select id="fontStylePicker3" onclick="fontstyle2('fontStylePicker3','class')" class="fontStylePicker">
+                                        <option value="Arial">Arial</option>
+                                        <option value="Helvetica">Helvetica</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="Times">Times</option>
+                                        <option value="Courier New">Courier New</option>
+                                        <option value="Courier">Courier</option>
+                                        <option value="Verdana">Verdana</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Palatino">Palatino</option>
+                                        <option value="Garamond">Garamond</option>
+                                        <option value="Bookman">Bookman</option>
+                                        <option value="Comic Sans MS">Comic Sans MS</option>
+                                        <option value="Trebuchet MS">Trebuchet MS</option>
+                                        <option value="Arial Black">Arial Black</option>
+                                        <option value="Impact">Impact</option>
+                                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                                        <option value="Tahoma">Tahoma</option>
+                                        <option value="Geneva">Geneva</option>
+                                        <option value="Lucida Console">Lucida Console</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ed">
+                            <input type="text" placeholder="Section" id="stdsec" class="input">
+                            <button class="editbtn" id="editbtn4"><i class="fas fa-user-edit"></i></button>
+                            <div class="edititem" id="edititem4">
+                                <label for="textColorPicker4">Pick Text color <input type="color" id="textColorPicker4" value="#000000" oninput="fontcolorchange('textColorPicker4','section')"></label>
+                                <label for="textSizePicker4" class="textsize">Text Size 
+                                    <button type="button" id="textminus4" onclick="textminus('textSizePicker4','section')"><i class="fa-solid fa-minus"></i></button>
+                                    <input type="text" placeholder="26" id="textSizePicker4" value=26 oninput="textsize('textSizePicker4','section')">
+                                    <button id="textminus4" onclick="textplus('textSizePicker4','section')"><i class="fa-solid fa-plus"></i></button></label>
+                                <button id="fleft" onclick="fmove('left','section')"><i class="fa-solid fa-arrow-left"></i></button>
+                                <button id="fright" onclick="fmove('right','section')"><i class="fa-solid fa-arrow-right"></i></button>
+                                <button id="fup" onclick="fmove('up','section')"><i class="fa-solid fa-arrow-up"></i></button>
+                                <button id="fdown" onclick="fmove('down','section')"><i class="fa-solid fa-arrow-down"></i></button>
+                                <label for="" id="fontstyle">Font Style 
+                                    <button id="bold4" class="bold" onclick="fontstyle('section','bold','4')"><i class="fa-solid fa-bold"></i></button>
+                                    <button id="italic4" class="italic" onclick="fontstyle('section','italic','4')"><i class="fa-solid fa-italic"></i></button>
+                                </label>
+                                <label for="fontStylePicker4">Font Family       
+                                    <select id="fontStylePicker4" onclick="fontstyle2('fontStylePicker4','section')" class="fontStylePicker">
+                                        <option value="Arial">Arial</option>
+                                        <option value="Helvetica">Helvetica</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="Times">Times</option>
+                                        <option value="Courier New">Courier New</option>
+                                        <option value="Courier">Courier</option>
+                                        <option value="Verdana">Verdana</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Palatino">Palatino</option>
+                                        <option value="Garamond">Garamond</option>
+                                        <option value="Bookman">Bookman</option>
+                                        <option value="Comic Sans MS">Comic Sans MS</option>
+                                        <option value="Trebuchet MS">Trebuchet MS</option>
+                                        <option value="Arial Black">Arial Black</option>
+                                        <option value="Impact">Impact</option>
+                                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                                        <option value="Tahoma">Tahoma</option>
+                                        <option value="Geneva">Geneva</option>
+                                        <option value="Lucida Console">Lucida Console</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ed">
+                            <input type="text" placeholder="Roll No" id="stdrollno" class="input">
+                            <button class="editbtn" id="editbtn5"><i class="fas fa-user-edit"></i></button>
+                            <div class="edititem" id="edititem5">
+                                <label for="textColorPicker5">Pick Text color <input type="color" id="textColorPicker5" value="#000000" oninput="fontcolorchange('textColorPicker5','rollno')"></label>
+                                <label for="textSizePicker5" class="textsize">Text Size 
+                                    <button type="button" id="textminus5" onclick="textminus('textSizePicker5','rollno')"><i class="fa-solid fa-minus"></i></button>
+                                    <input type="text" placeholder="26" id="textSizePicker5" value=26 oninput="textsize('textSizePicker5','rollno')">
+                                    <button id="textminus5" onclick="textplus('textSizePicker5','rollno')"><i class="fa-solid fa-plus"></i></button></label>
+                                <button id="fleft" onclick="fmove('left','rollno')"><i class="fa-solid fa-arrow-left"></i></button>
+                                <button id="fright" onclick="fmove('right','rollno')"><i class="fa-solid fa-arrow-right"></i></button>
+                                <button id="fup" onclick="fmove('up','rollno')"><i class="fa-solid fa-arrow-up"></i></button>
+                                <button id="fdown" onclick="fmove('down','rollno')"><i class="fa-solid fa-arrow-down"></i></button>
+                                <label for="" id="fontstyle">Font Style 
+                                    <button id="bold5" class="bold" onclick="fontstyle('rollno','bold','5')"><i class="fa-solid fa-bold"></i></button>
+                                    <button id="italic5" class="italic" onclick="fontstyle('rollno','italic','5')"><i class="fa-solid fa-italic"></i></button>
+                                </label>
+                                <label for="fontStylePicker5">Font Family       
+                                    <select id="fontStylePicker5" onclick="fontstyle2('fontStylePicker5','rollno')" class="fontStylePicker">
+                                        <option value="Arial">Arial</option>
+                                        <option value="Helvetica">Helvetica</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="Times">Times</option>
+                                        <option value="Courier New">Courier New</option>
+                                        <option value="Courier">Courier</option>
+                                        <option value="Verdana">Verdana</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Palatino">Palatino</option>
+                                        <option value="Garamond">Garamond</option>
+                                        <option value="Bookman">Bookman</option>
+                                        <option value="Comic Sans MS">Comic Sans MS</option>
+                                        <option value="Trebuchet MS">Trebuchet MS</option>
+                                        <option value="Arial Black">Arial Black</option>
+                                        <option value="Impact">Impact</option>
+                                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                                        <option value="Tahoma">Tahoma</option>
+                                        <option value="Geneva">Geneva</option>
+                                        <option value="Lucida Console">Lucida Console</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ed">
+                            <input type="text" placeholder="Subject" id="stdsub" class="input">
+                            <button class="editbtn" id="editbtn6"><i class="fas fa-user-edit"></i></button>
+                            <div class="edititem" id="edititem6">
+                                <label for="textColorPicker6">Pick Text color <input type="color" id="textColorPicker6" value="#000000" oninput="fontcolorchange('textColorPicker6','subject')"></label>
+                                <label for="textSizePicker6" class="textsize">Text Size 
+                                    <button type="button" id="textminus6" onclick="textminus('textSizePicker6','subject')"><i class="fa-solid fa-minus"></i></button>
+                                    <input type="text" placeholder="26" id="textSizePicker6" value=26 oninput="textsize('textSizePicker6','subject')">
+                                    <button id="textminus6" onclick="textplus('textSizePicker6','subject')"><i class="fa-solid fa-plus"></i></button></label>
+                                <button id="fleft" onclick="fmove('left','subject')"><i class="fa-solid fa-arrow-left"></i></button>
+                                <button id="fright" onclick="fmove('right','subject')"><i class="fa-solid fa-arrow-right"></i></button>
+                                <button id="fup" onclick="fmove('up','subject')"><i class="fa-solid fa-arrow-up"></i></button>
+                                <button id="fdown" onclick="fmove('down','subject')"><i class="fa-solid fa-arrow-down"></i></button>
+                                <label for="" id="fontstyle">Font Style 
+                                    <button id="bold6" class="bold" onclick="fontstyle('subject','bold','6')"><i class="fa-solid fa-bold"></i></button>
+                                    <button id="italic6" class="italic" onclick="fontstyle('subject','italic','6')"><i class="fa-solid fa-italic"></i></button>
+                                </label>
+                                <label for="fontStylePicker6">Font Family       
+                                    <select id="fontStylePicker6" onclick="fontstyle2('fontStylePicker6','subject')" class="fontStylePicker">
+                                        <option value="Arial">Arial</option>
+                                        <option value="Helvetica">Helvetica</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="Times">Times</option>
+                                        <option value="Courier New">Courier New</option>
+                                        <option value="Courier">Courier</option>
+                                        <option value="Verdana">Verdana</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Palatino">Palatino</option>
+                                        <option value="Garamond">Garamond</option>
+                                        <option value="Bookman">Bookman</option>
+                                        <option value="Comic Sans MS">Comic Sans MS</option>
+                                        <option value="Trebuchet MS">Trebuchet MS</option>
+                                        <option value="Arial Black">Arial Black</option>
+                                        <option value="Impact">Impact</option>
+                                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                                        <option value="Tahoma">Tahoma</option>
+                                        <option value="Geneva">Geneva</option>
+                                        <option value="Lucida Console">Lucida Console</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="order">
+                <div id="quantity">
+                    <h3>Quantity</h3>
+                    <input type="number" value=1 id="qtn" min=1>
+                </div>
+                <div id="type">
+                    <h3>Type</h3>
+                    <button id="normal"><h4>Matte</h4></button>
+                    <button id="glossy"><h4>Glossy</h4></button>
+                </div>
+                <div id="size">
+                    <h3>Size</h3>
+                    <select name="" id="selectsize">
+                        <option value='small'>Small - (100mm * 34 mm) 16 labels - 32nos</option>
+                        <option value='medium'>Medium - (100mm * 44 mm) 12 labels - 36nos</option>
+                        <option value='large'>Large - (100mm * 58 mm) 10 labels - 40nos</option>
+                        <option value='jumbo'>Jumbo - (100mm * 68 mm) 8 labels - 48nos</option>
+                    </select>
+                </div>
+                <!-- <h2 id="price"><i class="fa fa-inr" aria-hidden="true"></i>500</h2> -->
+                <button class="button-37" role="button" id="price">Rs. </button>
+                <button id="cartbtn">Add To Cart</button>
+                <button id="orderbtn">Order Now</button>
+                <button id="download">Download</button>
+                <button id="whatsapp" onclick="sendToWhatsApp()">For More Than One Imaage Contact Us in WhatsApp</button>
+            </div>
+        </div>
+    </div>
+    <section id="pagination" class="section-p1 back">
+        <a href="product.html"><i class="fas fa-long-arrow-alt-right"></i>  Go Back </a>
+     </section>
+     <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h3>Sign Up For Newsletters</h3>
+          <p>Get E-mail updates about our latest shop and <span>special offers</span>.</p>
+        </div>
+        <div class="form">
+         <input type="text" placeholder="Your email address">
+         <button>Sign Up</button>
+        </div>
+     </section>
+     <footer class="section-p1">
+        <div class="col">
+          <a href="#" class="logo-section"><img src="/./image/logo.png" alt="logo" class="logo"><h2>DreamikAI</h2></a>
+          <p><strong>Address: </strong>
+             MURVEN Infotech Design Solutions LLP <br>
+             715-A, 7th Floor, Spencer Plaza,<br>
+             Suite No.548, Mount Road, Anna Salai, <br>
+             Chennai - 600 002, Tamil Nadu, India</p>
+              <p><strong>General Inquiries: </strong>+91-44-28505188</p>
+              <p><strong>Email: </strong>murven.design@gmail.com</p>
+               <p><strong>GST: </strong>33ABPFM6846A1Z8</p>
+               <div class="follow">
+                 <h4>Follow us</h4>
+                 <div class="icons">
+                     <i class="fab fa-facebook-f"></i>
+                     <i class="fab fa-twitter"></i>
+                     <i class="fab fa-instagram"></i>
+                     <i class="fab fa-pinterest-p"></i>
+                     <i class="fab fa-youtube"></i>
+                 </div>
+               </div>
+        </div>
+        <div class="col">
+         <h3>Menu</h3>
+         <a href="#">Dreamik AI</a>
+         <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Return and Refund</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+         <h3>My Account</h3>
+         <a href="#">Sign In</a>
+         <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+        </div>
+        <div class="col install">
+         <h3>Install</h3>
+          <p>From Google Play</p>
+          <button>Get it on
+             <br><i class="fa-brands fa-google-play" style="color:red;"></i>Google Play
+         </button>
+         <p>Secured Payment Gateways</p>
+         <ul>
+             <li>Visa</li>
+             <li>Mastercard</li>
+             <li>Maestro</li>
+             <li>Gpay</li>
+         </ul>
+        </div>
+     </footer>
+     <footer class="f-2">
+         <p>© 2024 by Dreamik AI. Created by Sanads Digital</p>
+     </footer>
+     <script src="/style.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> -->
+     <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.813.0.min.js"></script> -->
+     <!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> -->
+     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1000.0.min.js"></script>
+    <script src="personal-script.js"></script>
+    <script src="/Send_AWS.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamikAI Posters</title>
+    <link rel="icon" type="image/x-icon" href="/image/logo.png">
+    <link rel="stylesheet" href="Poster.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav id="header">
+        <a href="#" class="logo-section"><img src="/./image/logo.png" alt="logo" class="logo"><h2>DreamikAI</h2></a>
+        <div id="menu"><img src="/image/menu.png" alt="" id="menubar"></div>
+        <div id="nav">
+            <ul id="navbar">
+                <li><a href="/index.html" class="active">Go To Shop</a></li>
+                <li>
+                    <a href="#" id="other_product" class="active">Other Product</a>
+                    <ul id="list_products">
+                        <li><a href="/NameSlip/Name_Slip.html">Name Slip</a></li>
+                        <li><a href="/BagTag/bagtag.html">Bag Tag</a></li>
+                        <li><a href="/Poster/Poster.html">Poster</a></li>
+                        <li><a href="/Sticker/Sticker.html">Sticker</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="nav1">
+        <ul id="navbar">
+            <li><a href="/index.html" class="active">Go To Shop</a></li>
+            <li>
+                <a href="#" id="other_product_m" class="active">Other Product</a>
+                <ul id="list_products_m">
+                    <li><a href="/NameSlip/Name_Slip.html">Name Slip</a></li>
+                    <li><a href="/BagTag/bagtag.html">Bag Tag</a></li>
+                    <li><a href="/Poster/Poster.html">Poster</a></li>
+                    <li><a href="/Sticker/Sticker.html">Sticker</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h3 id="heading">Customizable Posters</h3>
+    <div id="image-custom">
+        <div id="posters">
+            <div id="image-section" class="image-section">
+                <img src="/image/frame.jpeg" alt="" id="frame" style="display: none;" class="frame">
+                <img src="/image/bg3.jpeg" alt="" id="background" class="background">    
+                <img src="" alt="" id="foreground" class="foreground" onclick="setphoto('foreground')">
+                <img src="" alt="" id="foreground01" class="foreground1" onclick="setphoto('foreground10')">
+                <img src="/image/posterwatermark.png" alt="" id="watermark" class="watermark">
+            </div>
+            <div id="image-section1" class="image-section" style="display: none;">
+                <img src="/image/frame.jpeg" alt="" id="frame1" style="display: none;" class="frame">
+                <img src="/image/bg4.jpeg" alt="" id="background1" class="background">    
+                <img src="" alt="" id="foreground1" class="foreground">
+                <img src="" alt="" id="foreground11" class="foreground1">
+                <img src="/image/posterwatermark.png" alt="" id="watermark1" class="watermark">
+            </div>
+            <div id="images">
+                <img src="/image/bg3.jpeg" alt="" id="img1">
+                <img src="/image/bg4.jpeg" alt="" id="img2" style="display: none;">
+                <button id="AddImage">Add Image</button>
+            </div>
+        </div>
+        
+        <div id="personalize">
+            <div id="fg">
+                <h3 id="edit_items">Edit Image</h3>
+                <div id="editimg">
+                    <h3>
+                        <select name="" id="photoid">
+                            <option value=".foreground">Edit Photo 1</option>
+                            <option value=".foreground1">Edit Photo 2</option>
+                        </select>
+                    </h3>
+                    <label for="selectforeground" id="selectfg">Select Your Image</label>
+                    <input type="file" name="" id="selectforeground">
+                    
+                    <button id="deleteButton" onclick="tranform('del')"><i class="fa-solid fa-trash"></i></button>
+                    <button id="zoomInButton" onclick="tranform('zoomin')"><i class="fa fa-search-plus" aria-hidden="true"></i></i></button>
+                    <button id="zoomOutButton" onclick="tranform('zoomout')"><i class="fa fa-search-minus" aria-hidden="true"></i></button>
+                    <button id="rotateLeftButton" onclick="tranform('rleft')"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button id="rotateRightButton" onclick="tranform('rright')"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button id="flipHorizontalButton" onclick="tranform('fliph')"><i class="fas fa-arrows-alt-h"></i></button>
+                    <label for=""></label>
+                    <button id="flipVerticalButton" onclick="tranform('flipv')"><i class="fas fa-arrows-alt-v"></i></button>
+                    <button id="up" onclick="move('up')" ><i class="fa-solid fa-arrow-up"></i></button>
+                    <button id="down" onclick="move('down')"><i class="fa-solid fa-arrow-down"></i></button>
+                    <button id="left" onclick="move('left')" ><i class="fa-solid fa-arrow-left"></i></button>
+                    <button id="right" onclick="move('right')"><i class="fa-solid fa-arrow-right"></i></button>
+                    <label for="contrast">Contrast:<input type="range" id="contrast" min="50" max="300" value="0"><h4 id="contrastvalue">0</h4></label>
+                    <label for="brightness">Brightness:<input type="range" id="brightness" min="50" max="200" value="100"><h4 id="brightnessvalue">100</h4></label>
+                    <label for="imgColorPicker">Change Image Background Color :<input type="color" id="imgColorPicker" value="#000000"></label>
+                    <label for="circle" id="circlelabel">circle border<input type="checkbox" id="circle"></label>
+                    <label for="imgborder" id="borderlabel">image border<input type="checkbox" id="imgborder"></label>
+                </div>
+            </div>
+            <div id="bg">
+                <h3>Edit BackGround Image</h3>
+                <select name="" id="postersize">
+                </select>
+                <select name="" id="defaultbg">
+                </select>
+                <label for="selectbackground" id="selectbg">Select Custom Background</label>
+                <input type="file" id="selectbackground">
+                <label for="Transparacy">Transparacy<input type="range" id="Transparacy" min="1" max="100" value="0"><h4 id="Transparacyvalue">0</h4></label>
+            </div>
+        </div>
+        <div id="order">
+            <div id="quantity">
+                <h3>Quantity</h3>
+                <input type="number" name="" id="qtn" value="1" min="1">
+            </div>
+            <button id="price">Rs. </button>
+            <button id="orderbtn">Order Now</button>
+            <button id="cart">Add To Cart</button>
+            <button id="download">Download</button>
+            <button id="whatsapp" onclick="sendToWhatsApp()">For More Than One Imaage Contact Us in WhatsApp</button>
+        </div>
+    </div>
+    <section id="pagination" class="section-p1 back">
+        <a href="/index.html"><i class="fas fa-long-arrow-alt-right"></i> Go Back to shop</a>
+     </section>
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h3>Sign Up For Newsletters</h3>
+          <p>Get E-mail updates about our latest shop and <span>special offers</span>.</p>
+        </div>
+        <div class="form">
+         <input type="text" placeholder="Your email address">
+         <button>Sign Up</button>
+        </div>
+     </section>
+     <footer class="section-p1">
+        <div class="col">
+          <a href="#" class="logo-section"><img src="/image/logo.png" alt="logo" class="logo"><h2>DreamikAI</h2></a>
+          <p><strong>Address: </strong>
+             MURVEN Infotech Design Solutions LLP <br>
+             715-A, 7th Floor, Spencer Plaza,<br>
+             Suite No.548, Mount Road, Anna Salai, <br>
+             Chennai - 600 002, Tamil Nadu, India</p>
+              <p><strong>General Inquiries: </strong>+91-44-28505188</p>
+              <p><strong>Email: </strong>murven.design@gmail.com</p>
+               <p><strong>GST: </strong>33ABPFM6846A1Z8</p>
+               <div class="follow">
+                 <h4>Follow us</h4>
+                 <div class="icons">
+                     <i class="fab fa-facebook-f"></i>
+                     <i class="fab fa-twitter"></i>
+                     <i class="fab fa-instagram"></i>
+                     <i class="fab fa-pinterest-p"></i>
+                     <i class="fab fa-youtube"></i>
+                 </div>
+               </div>
+        </div>
+        <div class="col">
+         <h3>Menu</h3>
+         <a href="#">Dreamik AI</a>
+         <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Return and Refund</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+         <h3>My Account</h3>
+         <a href="#">Sign In</a>
+         <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+        </div>
+        <div class="col install">
+         <h3>Install</h3>
+          <p>From Google Play</p>
+          <button>Get it on
+             <br><i class="fa-brands fa-google-play" style="color:red;"></i>Google Play
+         </button>
+         <p>Secured Payment Gateways</p>
+         <ul>
+             <li>Visa</li>
+             <li>Mastercard</li>
+             <li>Maestro</li>
+             <li>Gpay</li>
+         </ul>
+        </div>
+     </footer>
+     <footer class="f-2">
+         <p>© 2024 by Dreamik AI. Created by Sanads Digital</p>
+     </footer>
+     <script src="/style.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1000.0.min.js"></script>
+    <script src="/Send_AWS.js"></script>
+    <script src="Poster.js"></script>
+</body>
+</html>

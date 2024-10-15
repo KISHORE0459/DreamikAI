@@ -1,0 +1,570 @@
+#label-custom{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+    flex-wrap: wrap;
+}
+#image{
+    position: relative;
+    height:50vw;
+}
+#image-section{
+    width: 50vw;
+    height: 30vw;
+    margin-left: 4vw;
+    margin-top: 35px;
+    /* background-image: url('/image/DreamikAIComics-Label-Watermark-Mask-Rectangle-v1-HD\(1080x1920\ px\).png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid;
+    position:relative;
+    margin-bottom: 30px;
+}
+#image-section > #labelimg,#image-section > #cmp_watermark{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#watermark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#cmp_watermark{
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+}
+#image{
+    width: 50vw;
+}
+#labeldetails{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4vw;
+    font-family:'Times New Roman', Times, serif;
+}
+#personalize{
+    width: 550px;
+    margin-left: 20px;
+    margin-top: -30px;
+    justify-content: center;
+    align-items: center;
+
+    background:
+    linear-gradient(to right, #fc7b54 1px, transparent 2px) 0 0,
+    /* linear-gradient(to right, black 4px, transparent 2px) 0 100%, */
+    linear-gradient(to left, #fc7b54 1px, transparent 1px) 100% 0,
+    /* linear-gradient(to left, black 4px, transparent 4px) 100% 100%, */
+    linear-gradient(to bottom, #fc7b54 1px, transparent 2px) 0 0,
+    linear-gradient(to bottom, #fc7b54 1px, transparent 1px) 100% 0;
+    /* linear-gradient(to top, black 4px, transparent 4px) 0 100%, */
+    /* linear-gradient(to top, black 4px, transparent 4px) 100% 100%; */
+
+    background-repeat: no-repeat;
+    background-size: 80px 40px;
+}
+#personalize-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.btn{
+    width: 200px;
+    height: 40px;
+    background-color: #1a1463;
+    color: #fefefe;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 19px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: underline;
+    background: linear-gradient(45deg,#fc7b54, #0056b3);
+}
+#selectimg:hover{
+    cursor: pointer;
+}
+#uploadimg{
+    display: none;
+}
+#editimg{
+    
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding:20px 3vw;
+    border: 2px dashed;
+}
+#editimg > h3{
+    width: 100%;
+    font-size: 20px;
+    color: #fc7b54;
+} 
+#editimg > button{
+    width: 40px;
+    height: 40px;
+}
+#image-section > h2{
+    font-size: 23px;
+}
+#editimg > label{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 19px;
+}
+#contrastvalue,#brightnessvalue{
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#edittext{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 30px;
+    align-items: center;
+}
+#stdname,#stdschool{
+    width: 60%;
+    height: 40px;
+}
+.input{
+    width: 50%;
+    height: 40px;
+}
+.ed{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.editbtn{
+    width: 40px;
+    height: 40px;
+}
+.editbtn > i{
+    transform: scale(1.5);
+}
+
+.editbtn:hover{
+    transform: scale(1.3);
+    /* border-radius: 50%; */
+    border-color: #fc7b54;
+    cursor: pointer;
+}
+.edititem{
+    width: 70%;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+    justify-content: center;
+    border: 2px dashed;
+    padding: 10px;
+}
+.edititem > label{
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    justify-content: left;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#fontstyle{
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+.textsize > input{
+    width: 40px;
+    height: 30px;
+}
+.textsize > button{
+    width: 30px;
+    height: 30px;
+}
+.textsize > button > i{
+    transform: scale(1.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fontStylePicker{
+    width: 50%;
+    height: 30px;
+}
+.italic,.bold{
+    width: 40px;
+    height: 30px;
+    border: 2px solid;
+}
+.bold{
+    background-color: #4a7bb1;
+    color: black;
+    transform: scale(1.2);
+    margin-left: 50px;
+}
+#textsize{
+    border: 2px solid;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edititem > button{
+    width: 30px;
+    height: 30px;
+}
+#extradiv{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#order{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+#quantity{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#quantity > h3{
+    width: 50%;
+    font-size: 25px;
+    color:#355070;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#quantity > button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#quantity > button:hover{
+    cursor: pointer;
+}
+#quantity > button > i{
+    transform: scale(2);
+}
+#quantity > input{
+    border: 2px solid gray;
+    width: 60px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    padding: 5px;
+}
+#size,#type{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin:10px 10px;
+}
+#size > h3,#type > h3{
+    font-size: 25px;
+    color: #355070;
+    width: 50%;
+    padding-left: 10px;
+    margin-left: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#selectsize{
+    width: 60%;
+    height: 35px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#price{
+    width: 60%;
+    height: 50px;
+    border: 2px solid;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #529239;
+    color: snow;
+}
+#editimg > #bg{
+    width: 50%;
+    height: 50px;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+#editimg > #bg:hover{
+    background-color: #1a1463;
+}
+
+.fontstyle{
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+}
+
+#editimg > #circlelabel{
+    width: 200px;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+#circle{
+    width: 15px;
+    height: 15px;
+}
+#imgborder{
+    width: 15px;
+    height: 15px;
+}
+#editimg > #borderlabel{
+    width: 200px;
+    font-size: 20px;
+}
+
+@media screen and (max-width:700px) {
+    #image-section{
+        width: 70vw;
+        height: 40vw;
+    }
+}
+
+.button-37 {
+    background-color: #13aa52;
+    border: 1px solid #13aa52;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 10px 25px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 60%;
+    height: 50px;
+  }
+  
+  .button-37:hover {
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(-2px);
+  }
+  #orderbtn,#download,#whatsapp{
+    width: 50%;
+    height: 40px;
+    background-color:  #529239;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  #orderbtn:hover,#download:hover{
+    background-color: #1e490b;
+    transform: translateX(3px);
+    cursor: pointer;
+  }
+  #whatsapp{
+    width: 400px;
+    height: 60px;
+    background-color: rgb(33, 87, 14);
+}
+#whatsapp:hover{
+    width: 420px; 
+}
+  #cartbtn{
+    width: 50%;
+    height: 40px;
+    background-color:#0056b3;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 7px;
+    color: white;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  #cartbtn:hover{
+    background-color: #1a1463;
+    transform: translateX(3px);
+    cursor: pointer;
+
+  }
+  #type > button{
+    width: 100px;
+    height: 40px;
+    border: 2px solid;
+  }
+  #normal{
+    background-color: #13aa52;
+    color: #fff;
+    transform: scale(1.2);
+    border: 1px solid;
+    border-radius: 15px;
+  }
+  #glossy{
+    border: 1px solid;
+  }
+
+#normal > h4 , #glossy > h4{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#imageIdPlaceholder{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#copy{
+    gap: 20px;
+    width: 70px;
+    height: 30px;
+}
+#copy:hover{
+    cursor:copy;
+}
+#imageIdPlaceholder > a > i{
+    margin-left: 30px;
+}
+
+  @media (min-width: 768px) {
+    .button-37 {
+      padding: 10px 30px;
+    }
+  }
+  @media screen and (max-width:700px) {
+    #personalize{
+        margin-top: 70px;
+        margin-left: 5px;
+    }
+    #imageIdPlaceholder > a > i{
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+  }
+  @media screen and (max-width:400px) {
+    #image{
+        width: 90vw;
+        height: 50vw;
+        margin-bottom: 20px;
+    }
+    #image-section{
+        width: 100%;
+        height: 100%;
+    }
+    #personalize{
+        margin-top: 70px;
+        margin-left: 5px;
+    }
+    #personalize-image{
+        width: 90vw;
+        margin-top: 20px;
+    }
+    #edittext{
+        width: 90%;
+        padding: 10px;
+    }
+    .ed{
+        width: 90vw;
+        justify-content: center;
+    }
+    .input{
+        width: 65vw;
+    }
+    .edititem{
+        width: 90vw;
+    }
+    #stdname,#stdschool{
+        width: 65vw;
+    }
+    /* #name{
+        font-size: 10px;
+    } */
+    #selectsize{
+        width: 200px;
+        margin-left: 15px;
+    }
+    #image-section > h2{
+        font-size: 90%;
+    }
+    #whatsapp{
+        width: 300px;
+        height: 80px;
+    }
+    #whatsapp:hover{
+        height: 85px;
+        width: 300px;
+    }
+  }
+
+

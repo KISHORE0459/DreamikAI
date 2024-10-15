@@ -1,0 +1,332 @@
+#image-custom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+#posters{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#image-section,#image-section1{
+    position: relative;
+    width:90%;
+    height: 600px;
+    margin-left: 5vw;
+}
+#frame,#frame1{
+    position: absolute;
+    width: 365px;
+    height: 600px; 
+}
+#background,#watermark,#background1,#watermark1{
+    position: absolute;
+    width: 300px;
+    height: 450px;
+    top: 75px;
+    left: 30px;
+}
+#foreground,#foreground01,#foreground1,#foreground11{
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    top: 300px;
+    left: 70px;
+    /* display: none; */
+    border :2px solid;
+}
+#foreground01,#foreground11{
+    left: 200px;
+}
+#images{
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+}
+#img1,#img2{
+    width: 60px;
+    height: 80px;
+    border: 7px solid rgba(17, 233, 179, 0.171);
+    box-shadow: 2px rgba(69, 160, 221, 0.171);
+    border-radius: 6px;
+}
+#AddImage{
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+}
+#personalize{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-left: 5vw;
+}
+#fg,#bg{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 45%;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+    padding: 10px;
+}
+#fg{
+    width: 50%;
+}
+#bg{
+    gap: 30px;
+}
+#fg > h3,#bg>h3{
+    font-size: 23px;
+    margin: 20px 0px;
+}
+#selectbackground,#selectforeground{
+    display: none;
+}
+#selectbg,#selectfg{
+    width: 300px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7px;
+    background-color: #033f63;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+#selectbg:hover,#selectfg:hover{
+    transform: scale(1.05);
+}
+#editimg{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+#editimg > h3{
+    width: 100%;
+}
+#photoid{
+    width: 60%;
+    height: 45px;
+    font-size: 22px;
+    border-radius: 6px;
+}
+#editimg > button{
+    width: 40px;
+    height: 40px;
+}
+#editimg > label{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#bg > label{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#defaultbg,#postersize{
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    padding:10px;
+}
+#heading{
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 20px 10px;
+    margin-bottom: 30px;
+    color: #28666e;
+}
+#order{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#price{
+    width: 200px;
+    height: 40px;
+    border: 2px solid;
+    background-color: #b5b682;
+    color: black;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight:600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+#orderbtn,#cart,#download,#whatsapp{
+    width: 300px;
+    height: 40px;
+    border: 2px solid;
+    background-color: #28666e;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+#orderbtn:hover,#cart:hover,#download:hover{
+    width: 250px;
+    font-size: 22px;
+    transition: 20ms;
+    
+}
+#whatsapp{
+    width: 400px;
+    height: 60px;
+    background-color: rgb(33, 87, 14);
+}
+#whatsapp:hover{
+    width: 420px; 
+}
+/* #watermark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+} */
+#images{
+    width: 500px;
+    height: 100px;
+}
+@media  screen and (max-width:500px) {
+    #image-custom{
+        width: 100%;
+    }
+    #image-section,#image-section1{
+        width: 215px;
+        height: 360px;
+        margin-left: 50px;
+    }
+    #background,#background1,#watermark,#watermark1{
+        width: 210px;
+        height: 355px;
+        top: 0px;
+        left: 0px;
+    }
+    #images{
+        margin-top: 40px;
+        width: 300px;
+        height: 150px;
+    }
+    /* .watermark{
+        width: 210px;
+        height: 355px;
+        top: 0px;
+        left: 0px;
+        display: none;
+    } */
+    #foreground,#foreground1,#foreground01,#foreground11{
+        width: 80px;
+        height: 130px;
+        top: 200px;
+        left: 20px;
+    }
+    #foreground01,#foreground11{
+        left: 120px;
+    }
+    #personalize{
+        width: 100%;
+    }
+    #fg{
+        width: 100%;
+    }
+    #bg{
+        width: 100%;
+    }
+    #heading{
+        margin-top: 40px;
+    }
+    #whatsapp{
+        width: 300px;
+        height: 80px;
+    }
+    #whatsapp:hover{
+        height: 85px;
+        width: 300px;
+    }
+}
+
+#quantity{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+#quantity > h3{
+    width: 50%;
+    font-size: 25px;
+    color:#355070;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#quantity > button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#quantity > button:hover{
+    cursor: pointer;
+}
+#quantity > button > i{
+    transform: scale(2);
+}
+#quantity > input{
+    border: 2px solid gray;
+    font-size: 23px;
+    padding: 5px;
+    width: 70px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#edit_fg{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+#edit_icon{
+    width: 30px;
+    height: 30px;
+    transform: scale(2);
+    margin-top: 18px;
+}

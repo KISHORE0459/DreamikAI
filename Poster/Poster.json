@@ -1,0 +1,25 @@
+{
+    "name":"Custamizable Poster",
+    "price":100,
+    "productcode":"699d2b",
+    "images":{
+        "Ocean":"/image/bg3.jpeg",
+        "Sun Set":"/image/bg1.jpeg",
+        "Snow Mountain":"/image/bg2.jpeg",
+        "Flower Frame":"/image/bg4.jpeg",
+        "White Theme":"/image/bg5.jpg",
+        "Black Theme":"/image/bg6.png"
+    },
+    "sizes":{
+        "6 x 4 Inch Without Frame":"6x4",
+        "A4 Size Without Frame":"A4",
+        "6 x 4 Inch With Frame":"6x4F",
+        "A4 Size With Frame":"A4F"
+    },
+    "prices":{
+        "6x4":100,
+        "A4":200,
+        "6x4F":200,
+        "A4F":300
+    }
+}

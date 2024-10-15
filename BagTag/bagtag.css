@@ -1,0 +1,305 @@
+#image-custom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 40px;
+}
+#image-section{
+    position: relative;
+    width: 310px;
+    height: 460px;
+    margin-left: 10vw;
+    margin-right: 5vw;
+    border: 2px solid;
+}
+#background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#foreground{
+    position: absolute;
+    width: 50%;
+    height: 44%;
+    top: 30%;
+    left: 25%;
+    border: 2px solid;
+}
+#cmp_watermark{
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+}
+#name,#class{
+    position: absolute;
+    width: 60%;
+    height: 7%;
+    top: 76%;
+    left:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+#class{
+    top: 85%;
+}
+#personalize{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 50%;
+}
+#fg{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+    padding: 10px;
+}
+#fg > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
+#fg > h3{
+    font-size: 23px;
+    margin: 20px 0px;
+}
+#selectbackground,#selectforeground{
+    display: none;
+}
+#selectbg,#selectfg,#removebg{
+    width: 300px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7px;
+    background-color: #033f63;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+#selectfg:hover,#removebg:hover{
+    transform: scale(1.05);
+}
+#stdname,#stdclass{
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+}
+#editimg{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+#editimg > h3{
+    width: 100%;
+}
+#editimg > button{
+    width: 40px;
+    height: 40px;
+}
+#editimg > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#editimg > label{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#defaultbg{
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    padding:10px;
+    margin-top: 10px;
+}
+#heading{
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 20px 10px;
+    margin-bottom: 30px;
+    color: #28666e;
+}
+#order{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#price{
+    width: 200px;
+    height: 40px;
+    border: 2px solid;
+    background-color: #b5b682;
+    color: black;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight:600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+#orderbtn,#cart,#download,#whatsapp{
+    width: 300px;
+    height: 40px;
+    border: 2px solid;
+    background-color: #28666e;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+#orderbtn:hover,#cart:hover,#download:hover{
+    width: 250px;
+    font-size: 22px;
+    transition: 20ms;  
+}
+#whatsapp{
+    width: 400px;
+    height: 60px;
+    background-color: rgb(33, 87, 14);
+}
+#whatsapp:hover{
+    width: 420px; 
+}
+#editem{
+    font-size: 30px;
+    color: #033f63;
+    margin-left: 5px;
+}
+@media  screen and (max-width:500px) {
+    #image-custom{
+        width: 100%;
+    }
+    #image-section{
+        width: 255px;
+    }
+    /* #background{
+        width: 250px;
+        height: 455px;
+    }
+    #foreground{
+        width: 140px;
+        height: 200px;
+        left: 55px;
+    }
+    #name,#class{
+        left: 48px;
+    } */
+    #personalize{
+        width: 100%;
+    }
+    #fg{
+        width: 100%;
+    }
+    #bg{
+        width: 100%;
+    }
+    #heading{
+        margin-top: 40px;
+    }
+    #order{
+        width: 100%;
+        margin-left: 5px;
+    }
+    #quantity{
+        width: 500px;
+    }
+    #name,#class{
+        font-size: 90%;
+    }
+    #whatsapp{
+        width: 300px;
+        height: 80px;
+        background-color: rgb(33, 87, 14);
+    }
+    #whatsapp:hover{
+        width: 320px; 
+    }
+}
+#quantity{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+#quantity > h3{
+    width: 50%;
+    font-size: 25px;
+    color:#355070;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#quantity > button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#quantity > button:hover{
+    cursor: pointer;
+}
+#quantity > button > i{
+    transform: scale(2);
+}
+#quantity > input{
+    border: 2px solid gray;
+    font-size: 23px;
+    padding: 5px;
+    width: 70px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#edit_items{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+#edit_icon{
+    width: 30px;
+    height: 30px;
+    transform: scale(2);
+    margin-top: 18px;
+}
