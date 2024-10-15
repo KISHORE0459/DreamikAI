@@ -1,2 +1,2 @@
-# DreamikAI
-It is a ecommerce site that i worked on my internship
+# DreamikAI-Customize-Labelgen-prod-v2
+DreamikAI-Customize-Labelgen-prod-v2 Jannath Marha

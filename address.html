@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dreamik-Address</title>
+    <style>
+        .ad2-form .f-tbl th,td{
+    border: none;
+}
+#image{
+    
+    max-height: 700px;
+}
+#image img{
+    
+            width: 100%;
+            height: 100%;
+        }
+        #test-img{
+            max-width: 400px;
+            object-fit:fill;
+            margin-bottom: 20px;
+        }
+.sub-items{
+    padding-bottom: 20px;
+}
+.sub-items h3{
+    margin-bottom: 10px;
+}
+.removecart{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <nav id="header">
+        <a href="#" class="logo-section"><img src="/./image/logo.png" alt="logo" class="logo"><h2>DreamikAI</h2></a>
+        <div id="menu"><img src="/image/menu.png" alt="" id="menubar"></div>
+        <div id="nav">
+            <ul id="navbar">
+                <li><a href="/index.html" class="active">Go To Shop</a></li>
+                <li><input type="text" placeholder="Search..." id="search"></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="nav1">
+        <ul id="navbar">
+            <li><a href="/index.html" class="active">Go To Shop</a></li>
+            <li><input type="text" placeholder="Search..." id="search"></li>
+        </ul>
+    </div>
+    
+    <form id="address" action="dummy.html" method="post">
+    <div class="add-box">
+        
+        <div class="pay-con">
+            <div id="items">
+
+            </div>
+            <h3 id="total" style="margin-bottom: 15px;">SubTotal: Rs. </h3>
+            
+            <h3 style="margin-bottom: 15px;">Shipping Charges : (Based on your State min:Rs 50) </h3>
+
+
+            <div class="ad2-form">
+                <table class="f-tbl">
+                    <tr><th colspan="3">Payment Type</th></tr>
+                    <tr><td><input type="radio" id="ptype2" name="ptype" value="normaldelivery" required></td><td><label for="ptype2"> Normal Delivery</label></td></tr>
+                    <tr><td><input type="radio" id="ptype1" name="ptype" value="expressdelivery" required></td><td><label for="ptype1">Express Delivery</label></td></tr>
+            
+                    <tr><th colspan="3">Mode of Delivery</th></tr>
+                    <tr><td><input type="radio" id="dmode1" name="dmode" value="onlinedelivery" required></td><td><label for="dmode1"> Online Delivery</label></td></tr>
+                    <tr><td><input type="radio" id="dmode2" name="dmode" value="f-cashondelivery" required></td><td><label for="dmode2"> Full Cash On Delivery</label></td></tr>
+                    <tr><td><input type="radio" id="dmode2" name="dmode" value="p-cashondelivery" required></td><td><label for="dmode2"> Partial Cash On Delivery<span id="dmod2"></span> </label></td></tr>
+                </table>
+                <div style="margin-top: 15px;"></div>
+                <label for="discount"><b>Discount:</b></label><br>
+                <input type="text" name="discount" id="discount" placeholder="Enter Your Discount Coupon">
+                <div class="totalpay" style="text-align: left;margin-left: -25px;">            <h2 style="width: 100%;">Total Amount to be paid Rs <span id="totalamtElement"></span> + <span style="font-weight: lighter;">shipping Charges</span></h2></div>
+                <div style="margin-top: 15px;"></div>
+                <div style="margin-top: 15px; text-align: left; padding: 1px;display: none;">
+                    <button class="otp" id="whatsapp" onclick="handleSendWhatsApp()" style="margin-right: 20px;"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i> Whatsapp</button>
+                    <button id="mail" onclick="handleSendEmail()" class="otp"><i class="fa-regular fa-envelope" style="color: #ffffff;"></i> Email</button>
+                </div>                </div>
+
+        </div>
+        <div class="ad-form">
+            
+                <label for="name">Name*</label><br>
+                <input type="text" placeholder="Enter your Name" name="name" id="name" required><br><br>
+                <label for="careof">Care Of</label><br>
+                <input type="text" placeholder="Enter Care of Your Children" name="careOf" id="careof" required><br><br>
+                <label for="mobno">Mobile Number*</label><br>
+                <input type="text" placeholder="Enter your Mobile Number" name="mobno" id="mobno" required><br>
+                <div class="iswh"><div><input type="checkbox" name="whatsapp" id="whatsapp" onchange="change()"></div><div><label for="whatsapp"> Is This your whatsapp No</label></div></div>
+                <br>
+                <div class="wha" id="wha">
+                    <label for="wtno">WhatsApp Number*</label><br>
+                    <input type="text" placeholder="Enter your WhatsApp Number" name="wtno" id="wtno"><br><br>
+                </div>  
+                <label for="email">Email Id</label><br>
+                <input type="email" placeholder="Enter your Email Id" name="email" id="email" required><br><br>
+                <label for="address2">Address Line 1*</label><br>
+                <input type="text" placeholder="Enter your Address" name="address2" id="address2" required><br><br>  
+                <label for="address1">Address Line 2</label><br>
+                <input type="text" placeholder="Enter your Address" name="address1" id="address1" ><br><br>
+                <label for="pincode">Pincode*</label><br>
+                <input type="number" onchange="handlePincodeChange(event)" placeholder="Enter your Pincode" name="pincode" id="pincode"required><br><br>
+                <label for="district">District</label><br>
+                <input type="text" placeholder="Enter your District" name="district" id="district" required><br><br>
+                <label for="state">State</label><br>
+                <input type="text" placeholder="Enter your State" name="state" id="state" required><br><br>
+                <label for="landmark">Landmark</label><br>
+                <input type="text" placeholder="Enter your landmark" name="landmark" id="landmark" required><br><br>
+                <label for="country">Country</label><br>
+                <input type="text" value="India" disabled name="country">
+                
+            <button id="submit" type="submit" class="otp ot">Order Now</button> <h3 class="otx" onclick="window.location.href='index.html'"><i class="fa-solid fa-circle-left"></i> Go Back</h3>
+            </div>
+            
+    </div>
+    </form>
+    <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h3>Sign Up For Newsletters</h3>
+        <p>Get E-mail updates about our latest shop and <span>special offers</span>.</p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button>Sign Up</button>
+    </div>
+    </section>
+    <footer class="section-p1">
+    <div class="col1">
+        <a href="#" class="logo-section"><img src="./image/logo.png" alt="logo" class="logo"><h2>DreamikAI</h2></a>
+        <p><strong>Address: </strong>
+            MURVEN Infotech Design Solutions LLP <br>
+            715-A, 7th Floor, Spencer Plaza,<br>
+            Suite No.548, Mount Road, Anna Salai, <br>
+            Chennai - 600 002, Tamil Nadu, India</p>
+            <p><strong>General Inquiries: </strong>+91-44-28505188</p>
+            <p><strong>Email: </strong>murven.design@gmail.com</p>
+            <p><strong>GST: </strong>33ABPFM6846A1Z8</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+    </div>
+    <div class="col2">
+        <h3>Menu</h3>
+        <a href="#">Dreamik AI</a>
+        <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Return and Refund</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+    </div>
+    <div class="col3">
+        <h3>My Account</h3>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+    <a href="#">My Wishlist</a>
+    <a href="#">Track My Order</a>
+    <a href="#">Help</a>
+    </div>
+    <div class="col install">
+        <h3>Install</h3>
+        <p>From Google Play</p>
+        <button>Get it on
+            <br><i class="fa-brands fa-google-play" style="color:red;"></i>Google Play
+        </button>
+        <p>Secured Payment Gateways</p>
+        <ul>
+            <li>Visa</li>
+            <li>Mastercard</li>
+            <li>Maestro</li>
+            <li>Gpay</li>
+        </ul>
+    </div>
+    </footer>
+    <footer class="f-2">
+        <p>© 2024 by Dreamik AI. Created by Sanads Digital</p>
+    </footer>
+    <script>
+        
+    let total = 0;
+         window.addEventListener('load', async () => {
+            let ptype = document.getElementsByName("ptype");
+            let dmode = document.getElementsByName("dmode");
+            let iswh=document.getElementById("whatsapp");
+            
+            iswh.addEventListener('change', ()=>{
+                console.log('changed')
+                let what = document.querySelector('.wha');
+                what.classList.toggle('whats')
+                
+            })
+
+            for (let i = 0; i < ptype.length; i++) {
+                ptype[i].addEventListener('change', logSelectedValues);
+            }
+
+            for (let i = 0; i < dmode.length; i++) {
+                dmode[i].addEventListener('change', logSelectedValues);
+            } 
+              var cart = await JSON.parse(localStorage.getItem("cart"));
+    console.log(cart);
+    
+    let tot = document.getElementById('total');
+    let iname;
+    Object.keys(cart).forEach( async key=>{
+            let quantity = parseInt(cart[key].qtn, 10) || 0;
+            let priceStr = cart[key].price || "0";
+            let price = parseInt(priceStr.replace(/[^\d]/g, ''), 10) || 0;// Assuming price is in the format "Rs. 100"
+        
+        total += price * quantity; 
+        if(key!="count"){
+        
+        let div1 = document.createElement('div');
+        div1.className='sub-items';
+        document.getElementById("items").appendChild(div1);
+        let img = document.createElement('img');
+        img.id="test-img";
+        img.className="img";
+        img.src= JSON.parse(localStorage.getItem(cart[key].image));
+        iname= cart[key].image;
+        div1.appendChild(img);
+        let name = document.createElement('h3');
+        name.innerHTML="Name :"+cart[key].name;
+        div1.appendChild(name);
+        let price = document.createElement('h3');
+        price.innerHTML="Price :"+cart[key].price;
+        div1.appendChild(price);
+        let qtn = document.createElement('h3');
+        qtn.innerHTML="Quantity :"+cart[key].qtn;
+        div1.appendChild(qtn);
+        div2 = document.createElement('div');
+        div2.className="divbtn";
+        div1.appendChild(div2);
+        // var order = document.createElement('button');
+        // order.innerHTML="Order Now";
+        // order.id="order";
+        // order.className='order';
+        // div2.appendChild(order);
+        // order.onclick=async ()=>{
+        //     localStorage.setItem("Image",JSON.stringify(localStorage.getItem("Image")))
+        //     var data = cart[key];
+        //     let imagefile;
+
+        //     await html2canvas(img, {
+        //     onrendered: async function(canvas) {
+        //         let imgData = await canvas.toDataURL('image/png');
+        //         await localStorage.setItem('Image', JSON.stringify(imgData));
+        //         console.log('stored');
+
+        //         await canvas.toBlob( function(blob){
+        //             imagefile = new File([blob],fileName,{type:"image/png"});
+        //         } ,'image/png');
+        //     }
+        //     });
+
+        //     var date = new Date();
+        //     var newdate =String(String(date.getFullYear()+String(date.getMonth())+String(date.getDate())+String(date.getHours())+String(date.getMinutes())+date.getSeconds()));
+
+        //     let fileName = cart[key].productcode+"_" +newdate+ '_'+Math.random().toString(36).substring(7) + '.csv';
+
+        //     Object.defineProperty(data,'filename',filename);
+
+        //     console.log(data);
+
+        //     await localStorage.setItem("Data",JSON.stringify(data))
+
+        //     const file = await new File([data], fileName, {type: 'text/json'});
+
+        //     AWS.config.region = "ap-south-1";
+        //     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+        //     IdentityPoolId: "ap-south-1:f6f8d75b-560d-4a11-8b37-67906ac38e41",      });
+
+        //     const s3 = new AWS.S3();
+        //     const params = {
+        //     Bucket: "dreamik-web-customize-v1",
+        //     Key: fileName,
+        //     Body: file,
+        //     };
+            
+        //     s3.putObject(params, (err, data) => {   if (err) {
+        //         console.error("Error uploading file:", err);
+        //         alert("An error occurred while uploading the file.");
+        //         } else {
+        //         console.log("File uploaded successfully:", data);
+        //         }
+        //     });
+        //     let fileNameimg = cart[key].productcode+"_" +newdate+ '_' + Math.random().toString(36).substring(7) + '.png';
+        //     const paramsimg = {
+        //         Bucket: "dreamik-web-customize-v1",
+        //         Key: fileNameimg,
+        //         Body: imagefile,
+        //     };
+        //     s3.putObject(paramsimg, (err, data) => {   if (err) {
+        //         console.error("Error uploading file:", err);
+        //         alert("An error occurred while uploading the file.");
+        //         } else {
+        //         console.log("File uploaded successfully:", data);
+        //         alert("Product ordered successfully!");
+        //         }
+        //     });
+        // }
+        var removecart = document.createElement('button');
+        removecart.innerHTML="Remove";
+        removecart.className='removecart';
+        removecart.onclick= async ()=>{
+            await delete cart[key];
+            // localStorage.removeItem(iname);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            location.replace("address.html");
+        }
+        div2.appendChild(removecart);
+        }
+    })
+    let total1=total+50;
+    tot.innerHTML += total;
+    document.getElementById("totalamtElement").innerHTML+=total1;
+    
+    let dmod2 = document.getElementById('dmod2');
+        dmod2.innerHTML = ` (Rs. ${(total1 / 2).toFixed(0)})`;
+});
+        var sum=0;
+        var netsum=0;
+        // Function to populate the payment table with cart data
+        function populatePaymentTable() {
+            var cartData = JSON.parse(localStorage.getItem('cartData') || '{}');
+
+            
+        }
+
+        // Function to handle pincode change event
+        async function handlePincodeChange(event) {
+            let pincode = event.target.value;
+            if (pincode.length === 6) {
+                try {
+                    let response = await fetch(`https://api.postalpincode.in/pincode/${pincode}`);
+                    let data = await response.json();
+                    if (data[0].Status === "Success") {
+                        let postOffice = data[0].PostOffice[0];
+                        document.getElementById('district').value = postOffice.District;
+                        document.getElementById('state').value = postOffice.State;
+                    } else {
+                        alert("Invalid pincode");
+                    }
+                } catch (error) {
+                    console.error('Error fetching pincode details:', error);
+                }
+            }
+        }
+        // Call the function to populate the payment table when the page loads
+        document.addEventListener('DOMContentLoaded', populatePaymentTable);
+        function logSelectedValues() {
+            let totalamtElement = document.getElementById("totalamtElement");
+            let totval = total+50;  // Start with the base value plus a default increment
+            let ptype = document.getElementsByName("ptype");
+            let dmode = document.getElementsByName("dmode");
+            let selectedPtypeValue;
+            let selectedDmodeValue;
+
+            // Calculate additional amount based on selected payment type
+            for (let i = 0; i < ptype.length; i++) {
+                if (ptype[i].checked) {
+                    selectedPtypeValue = ptype[i].value;
+                    if (selectedPtypeValue === "expressdelivery") {
+                        totval += 90;
+                    }
+                    break;
+                }
+            }
+
+            // Calculate additional amount based on selected delivery mode
+            for (let i = 0; i < dmode.length; i++) {
+                
+                let submit = document.getElementById("submit");
+                if (dmode[i].checked) {
+                    selectedDmodeValue = dmode[i].value;
+                    if (selectedDmodeValue === "f-cashondelivery" || selectedDmodeValue === "p-cashondelivery") {
+                        totval += 50;
+                        submit.innerHTML = "Order Now";
+                    } else {
+                        submit.innerHTML = "Pay Now";
+                    }
+                    break;
+                }
+            }
+
+            // Update the total amount displayed
+            totalamtElement.innerHTML = `${totval.toFixed(0)}`;
+            localStorage.setItem("totval",totval.toFixed(0));
+            
+        let dmod2 = document.getElementById('dmod2');
+        dmod2.innerHTML = ` (Rs. ${(totval / 2).toFixed(0)})`;
+            console.log("Selected Payment Type: " + selectedPtypeValue);
+            console.log("Selected Mode of Delivery : " + selectedDmodeValue);
+            console.log("Total Amount: Rs " + totval);
+        }
+        let submit = document.getElementById('address');
+        submit.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const today = new Date();
+    const date = `${String(today.getDate()).padStart(2, '0')}/${String(today.getMonth() + 1).padStart(2, '0')}/${today.getFullYear()}`;
+    const generateOrderId = () => {
+        const timestamp = Date.now();
+        const randomNum = Math.floor(Math.random() * 10000);
+        return `ORDER-${timestamp}-${randomNum}`;
+    };
+
+    const orderId = generateOrderId();
+    // Retrieve cart from local storage
+    var cart = JSON.parse(localStorage.getItem("cart")); 
+
+    let cost=localStorage.getItem("totval");
+    // Create formData object
+    const name = document.getElementById('name').value || '';
+            const careOf = document.getElementById('careof').value || '';
+            const mobno = document.getElementById('mobno').value || '';
+            const whatsapp = document.getElementById('whatsapp').checked;
+            const wtno = whatsapp ? document.getElementById('wtno').value || mobno : mobno;
+            const email = document.getElementById('email').value || '';
+            const address1 = document.getElementById('address1').value || '';
+            const address2 = document.getElementById('address2').value || '';
+            const pincode = document.getElementById('pincode').value || '';
+            const district = document.getElementById('district').value || '';
+            const state = document.getElementById('state').value || '';
+            const landmark = document.getElementById('landmark').value || '';
+            const country = 'India';
+
+            // Concatenate the full address
+            const fullAddress = `${address1} ${address2} ${pincode} ${district} ${state}`.trim();
+
+            // Create formData object
+            const formData = {
+                orderId: orderId,
+                date: date,
+                name: name,
+                careOf: careOf,
+                mobno: mobno,
+                whatsapp: whatsapp,
+                wtno: wtno,
+                email: email,
+                address1: address1,
+                address2: address2,
+                pincode: pincode,
+                district: district,
+                state: state,
+                address: fullAddress,
+                landmark: landmark,
+                country: country,
+                total: cost,
+                products: []
+            };
+
+
+
+    // Loop through the cart and add each item to the formData products array
+    Object.keys(cart).forEach(key => {
+        if (key !== 'count') { // assuming 'count' is not a product key
+            formData.products.push({
+                name: cart[key].name,
+                quantity: cart[key].qtn,
+                unitprice: cart[key].price,
+                size: cart[key].size
+            });
+        }
+    });
+
+            localStorage.setItem('finaldata', JSON.stringify(formData));
+            let final=document.getElementById("totalamtElement").innerHTML;
+            window.location.href = "otp.html"; // Redirect to otp.html
+        });
+        change=()=>{
+            console.log('changed')
+            document.getElementById('wha')
+            wha.classList.toggle('whats')
+        }
+        
+    </script>
+</body>
+</html>

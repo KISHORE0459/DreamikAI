@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS S3</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+</head>
+<body>
+    <h2>AWS S3 Bucket Order details Sending</h2>
+    <button onclick="send()">Send</button>
+    <script>
+        async function send() {
+            // Retrieve the data from localStorage
+            let data = await localStorage.getItem('finaldata');
+
+            if (data) {
+                // Generate the filename with current timestamp
+                const timestamp = new Date().toISOString().replace(/[-:.]/g, '');
+                const fileName = `OrderData_${timestamp}.txt`;
+
+                // Send the text string to S3
+                SendToAws(data, fileName, 'text/plain');
+            } else {
+                alert("No data found in localStorage.");
+            }
+        }
+
+        function SendToAws(file, filename, type) {
+            AWS.config.region = "ap-south-1";
+            AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+                IdentityPoolId: "ap-south-1:f6f8d75b-560d-4a11-8b37-67906ac38e41",
+            });
+
+            const s3 = new AWS.S3();
+
+            const params = {
+                Bucket: "dreamik-web-customize-v1",
+                Key: "temp/" + filename,
+                Body: file,
+                ContentType: type
+            };
+
+            s3.putObject(params, (err, data) => {
+                if (err) {
+                    console.error("Error uploading file:", err);
+                    alert("An error occurred while uploading the file.");
+                } else {
+                    console.log("File uploaded successfully:", data);
+                    alert("File uploaded successfully.");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

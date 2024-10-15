@@ -1,0 +1,179 @@
+/* ------------ Header ------------ */
+
+/* ------------ Main ------------ */
+
+
+.add-box
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 25px 5vw;
+    row-gap: 25px;
+}
+
+.ad-form,.ad2-form{
+    width: 40vw;
+    text-align: left;
+}
+.ad-form input{
+    padding: 7px;
+    width: 100%;
+}
+.pay-con {
+    width: 500px;
+    padding: 25px;
+    background-color: rgb(246, 246, 246);
+}
+
+#pay_tbl {
+    margin-right: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#pay_tbl tr th,
+#pay_tbl tr td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.ad2-form input {
+    padding: 5px;
+}
+
+.ad2-form div {
+    padding-left: 25px;
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+}
+
+.ad2-form input[type="radio"] {
+    cursor: pointer;
+    margin-right: 15px;
+}
+.ad2-form{
+    width: 300px;
+}
+
+.ad2-form .f-tbl td{
+padding:5px;
+font-size: 15px;
+}
+
+.iswh{
+    margin-top: 15px;
+    display: flex;
+    justify-content: start;
+}
+.iswh input{
+    
+    cursor: pointer;
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+}
+button{
+    border-radius: 5px;
+}
+.otp{
+    margin-top: 10px;
+    padding: 8px 10px;
+    border:none;
+    background-color: rgb(14,14,130);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.ot{
+    padding: 15px 40px;
+}
+.otp:hover{
+    background-color: rgb(57, 57, 117);
+}
+.totalpay{
+    width: 500px;
+}
+
+.whats{
+    display: none;
+}
+.otx{
+    background-color: rgb(14, 111, 130);
+    margin-top: 10px;
+    width: 150px;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.otx:hover{
+    background-color: rgb(0, 76, 92);
+}
+
+.term{
+    padding-top: 10vh;
+    text-align: center;
+    padding-bottom:10vh ;
+}
+.terms{
+    background-color: rgb(202, 202, 202);
+    border: 5px solid rgb(14, 14, 130);
+    width: 80vw;
+    text-align: justify;
+    padding: 25px;
+    margin: auto;
+}
+.terms span{
+    font-weight: bold;
+    font-size: 20px;
+    color:rgb(14,14,130);
+
+}
+/*-------------- Media Queries -------------*/
+/* Responsive Styles */
+
+@media only screen and (max-width: 600px) {
+    .pay-con {
+        padding: 15px;
+        width: 95vw;
+    }
+    #pay_tbl tr th,
+    #pay_tbl tr td {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width:768px) {
+
+    .ad-form{
+        width: 500px;
+    }
+    .ad-form input{
+        width: 100%;
+    }
+    #pay_tbl th,td{
+        font-size: 10px;
+    }
+}
+@media all and(max-width:370)
+{
+.ad-form{
+    width: 300px;
+}    
+.ad2-form div {
+    flex-wrap: wrap;
+}
+
+.ad2-form input[type="radio"] {
+    margin-right: 10px;
+}
+
+.ad2-form label {
+    margin-bottom: 5px;
+}
+}

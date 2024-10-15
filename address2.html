@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #image img{
+            width: 100%;
+            height: 100%;
+        }
+        #test-img{
+            width: 300px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        #img-details h3{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+        <a href="#" class="logo-section"><img src="/./image/logo.png" alt="logo" class="logo"><h2>DreamikAI</h2></a>
+        <div id="menu"><img src="/image/menu.png" alt="" id="menubar"></div>
+        <div id="nav">
+            <ul id="navbar">
+                <li><a href="/index.html" class="active">Go To Shop</a></li>
+                <li><input type="text" placeholder="Search..." id="search"></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="nav1">
+        <ul id="navbar">
+            <li><a href="/index.html" class="active">Go To Shop</a></li>
+            <li><input type="text" placeholder="Search..." id="search"></li>
+        </ul>
+    </div>
+    <form id="submit" method="post" action="otp.html">
+    <div class="add-box">
+        
+        <div class="pay-con">
+            <div id="image">
+                <img src="" id="testimg">
+            </div>
+            <div id="img-details"></div>
+            <h3 id="total" style="margin-bottom: 15px;">SubTotal: Rs. </h3>
+            
+            <h3 style="margin-bottom: 15px;">Shipping Charges : (Based on your State min:Rs 50) </h3>
+
+
+            <div class="ad2-form">
+                <table class="f-tbl">
+                    <tr><th colspan="3">Payment Type</th></tr>
+                    <tr><td><input type="radio" id="ptype2" name="ptype" value="normaldelivery" required></td><td><label for="ptype2"> Normal Delivery</label></td></tr>
+                    <tr><td><input type="radio" id="ptype1" name="ptype" value="expressdelivery" required></td><td><label for="ptype1">Express Delivery</label></td></tr>
+            
+                    <tr><th colspan="3">Mode of Delivery</th></tr>
+                    <tr><td><input type="radio" id="dmode1" name="dmode" value="onlinedelivery" required></td><td><label for="dmode1"> Online Delivery</label></td></tr>
+                    <tr><td><input type="radio" id="dmode2" name="dmode" value="f-cashondelivery" required></td><td><label for="dmode2"> Full Cash On Delivery</label></td></tr>
+                    <tr><td><input type="radio" id="dmode2" name="dmode" value="p-cashondelivery" required></td><td><label for="dmode2" > Partial Cash On Delivery <span id="dmod2"></span></label></td></tr>
+                </table>
+                <div style="margin-top: 15px;"></div>
+                <label for="discount"><b>Discount:</b></label><br>
+                <input type="text" name="discount" id="discount" placeholder="Enter Your Discount Coupon">
+                <div class="totalpay" style="text-align: left;margin-left: -25px;">           
+                     <h2 style="width: 100%;">Total Amount to be paid Rs <span id="totamt"></span> + Shipping Charges</h2></div>
+                <div style="margin-top: 15px;"></div>
+                                </div>
+
+        </div>
+        <div class="ad-form">
+            
+                <label for="name">Name*</label><br>
+                <input type="text" placeholder="Enter your Name" name="name" id="name" required><br><br>
+                <label for="careof">Care Of</label><br>
+                <input type="text" placeholder="Enter Care of Your Children" name="careOf" id="careof" required><br><br>
+                <label for="mobno">Mobile Number*</label><br>
+                <input type="text" placeholder="Enter your Mobile Number" name="mobno" id="mobno" required><br>
+                <div class="iswh"><div><input type="checkbox" name="whatsapp" id="whatsapp" onchange="change()"></div><div><label for="whatsapp"> Is This your whatsapp No</label></div></div>
+                <br>
+                <div class="wha" id="wha">
+                    <label for="wtno">WhatsApp Number*</label><br>
+                    <input type="text" placeholder="Enter your WhatsApp Number" name="wtno" id="wtno"><br><br>
+                </div>  
+                <label for="email">Email Id</label><br>
+                <input type="email" placeholder="Enter your Email Id" name="email" id="email" required><br><br>
+                <label for="address">Address Line 1*</label><br>
+                <input type="text" placeholder="Enter your Address" name="address" id="address" required><br><br>
+                <label for="address2">Address Line 2</label><br>
+                <input type="text" placeholder="Enter your Address" name="address2" id="address2"><br><br>
+                <label for="pincode">Pincode*</label><br>
+                <input type="number" onchange="handlePincodeChange(event)" placeholder="Enter your Pincode" name="pincode" id="pincode"required><br><br>
+                <label for="district">District</label><br>
+                <input type="text" placeholder="Enter your District" name="district" id="district" required><br><br>
+                <label for="state">State</label><br>
+                <input type="text" onchange="" placeholder="Enter your State" name="state" id="state" required><br><br>
+                <label for="landmark">Landmark</label><br>
+                <input type="text" placeholder="Enter your landmark" name="landmark" id="landmark" required><br><br>
+                <label for="country">Country</label><br>
+                <input type="text" value="India" disabled name="country">
+                <button id="address" type="submit" class="otp ot">Order Now</button> <button class="otp ot" onclick="window.location.href='index.html'"><i class="fa-solid fa-circle-left"></i> Go Back</button>
+               
+            </div>
+    </div>
+    </form>
+    
+    <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h3>Sign Up For Newsletters</h3>
+        <p>Get E-mail updates about our latest shop and <span>special offers</span>.</p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button>Sign Up</button>
+    </div>
+    </section>
+    <footer class="section-p1">
+    <div class="col1">
+        <a href="#" class="logo-section"><img src="./image/logo.png" alt="logo" class="logo"><h2>DreamikAI</h2></a>
+        <p><strong>Address: </strong>
+            MURVEN Infotech Design Solutions LLP <br>
+            715-A, 7th Floor, Spencer Plaza,<br>
+            Suite No.548, Mount Road, Anna Salai, <br>
+            Chennai - 600 002, Tamil Nadu, India</p>
+            <p><strong>General Inquiries: </strong>+91-44-28505188</p>
+            <p><strong>Email: </strong>murven.design@gmail.com</p>
+            <p><strong>GST: </strong>33ABPFM6846A1Z8</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+    </div>
+    <div class="col2">
+        <h3>Menu</h3>
+        <a href="#">Dreamik AI</a>
+        <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Return and Refund</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+    </div>
+    <div class="col3">
+        <h3>My Account</h3>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+    <a href="#">My Wishlist</a>
+    <a href="#">Track My Order</a>
+    <a href="#">Help</a>
+    </div>
+    <div class="col install">
+        <h3>Install</h3>
+        <p>From Google Play</p>
+        <button>Get it on
+            <br><i class="fa-brands fa-google-play" style="color:red;"></i>Google Play
+        </button>
+        <p>Secured Payment Gateways</p>
+        <ul>
+            <li>Visa</li>
+            <li>Mastercard</li>
+            <li>Maestro</li>
+            <li>Gpay</li>
+        </ul>
+    </div>
+    </footer>
+    <footer class="f-2">
+        <p>© 2024 by Dreamik AI. Created by Sanads Digital</p>
+    </footer>
+    <script>
+        let totalAmount=0;
+window.addEventListener('load', () => {
+    let total = document.getElementById("total");
+    
+    let ptype = document.getElementsByName("ptype");
+    let dmode = document.getElementsByName("dmode");
+    
+    // Retrieve data from localStorage
+    // let storedData = localStorage.getItem("orderData");
+    var img = JSON.parse(localStorage.getItem("Image"));
+console.log(img)
+if (img) {
+document.getElementById('testimg').src = img;
+console.log('set');
+} else {
+alert('No image found in local storage.');
+}
+let storedData = localStorage.getItem("orderData");
+    
+     if (storedData) {
+       let data = JSON.parse(storedData); 
+         console.log(data)// Parse the JSON string back into an object
+        
+         // Correctly parse the quantity value (remove extra space in key)
+         let quantity = parseInt(data["quantity "]);
+        
+         console.log(quantity);
+        
+         // Extract numerical value from price string
+         let price = parseFloat(data.price.replace(/[^0-9.-]+/g, ""));
+        
+         let detail = document.getElementById("img-details");
+           detail.innerHTML += `<h3>Name: ${data.Name}</h3><h3>Price: ${data.price}</h3><h3>Quantity: ${data.quantity}</h3><h3>Size: ${data.size}</h3>`;
+        
+        totalAmount = price * data.quantity*1000;
+   
+        total.innerHTML += `Total: Rs. ${totalAmount.toFixed(0)}`;
+        let totamt=document.getElementById('totamt');
+      totamt.innerHTML=`${totalAmount+50}`
+        let payval=document.getElementById('totamt').innerHTML;
+        console.log(totalAmount/2)
+        let dmod2 = document.getElementById('dmod2');
+        dmod2.innerHTML += ` (Rs. ${(payval / 2).toFixed(0)})`;
+
+    } else {
+        console.log("No data found in localStorage");
+     }
+    for (let i = 0; i < ptype.length; i++) 
+    {
+        ptype[i].addEventListener('change', logSelectedValues);
+    }
+
+    for (let i = 0; i < dmode.length; i++)
+    {
+        dmode[i].addEventListener('change', logSelectedValues);
+    }
+});
+
+function logSelectedValues() {
+            let totalamtElement = document.getElementById("totamt");
+            console.log(totalAmount)
+            let totval = totalAmount+50;  // Start with the base value plus a default increment
+            let ptype = document.getElementsByName("ptype");
+            let dmode = document.getElementsByName("dmode");
+            let selectedPtypeValue;
+            let selectedDmodeValue;
+
+            // Calculate additional amount based on selected payment type
+            for (let i = 0; i < ptype.length; i++) {
+                if (ptype[i].checked) {
+                    selectedPtypeValue = ptype[i].value;
+                    if (selectedPtypeValue === "expressdelivery") {
+                        totval += 90;
+                    }
+                    break;
+                }
+            }
+
+            // Calculate additional amount based on selected delivery mode
+            for (let i = 0; i < dmode.length; i++) {
+                
+                let submit = document.getElementById("address");
+                if (dmode[i].checked) {
+                    selectedDmodeValue = dmode[i].value;
+                    if (selectedDmodeValue === "f-cashondelivery" ) {
+                        totval += 50;
+                        submit.innerHTML = "Order Now";
+                    }
+                    else if(selectedDmodeValue === "p-cashondelivery"){
+                        totval += 50;
+                        submit.innerHTML = "Pay Now";
+                    } else {
+                        submit.innerHTML = "Pay Now";
+                    }
+                    break;
+                }
+            }
+
+            // Update the total amount displayed
+            totalamtElement.innerHTML = totval;
+            localStorage.setItem("totval",totval);
+            let payval=document.getElementById('totamt').innerHTML;
+        console.log(totalAmount/2)
+        let dmod2 = document.getElementById('dmod2');
+        dmod2.innerHTML = ` (Rs. ${(payval / 2).toFixed(0)})`;
+            console.log("Selected Payment Type: " + selectedPtypeValue);
+            console.log("Selected Mode of Delivery : " + selectedDmodeValue);
+            console.log("Total Amount: Rs " + totval);
+        }
+
+         async function handlePincodeChange(event) {
+            let pincode = event.target.value;
+            if (pincode.length === 6) {
+                try {
+                    let response = await fetch(`https://api.postalpincode.in/pincode/${pincode}`);
+                    let data = await response.json();
+                    if (data[0].Status === "Success") {
+                        let postOffice = data[0].PostOffice[0];
+                        document.getElementById('district').value = postOffice.District;
+                        document.getElementById('state').value = postOffice.State;
+                    } else {
+                        alert("Invalid pincode");
+                    }
+                } catch (error) {
+                    console.error('Error fetching pincode details:', error);
+                }
+            }
+        }
+        const handleSendWhatsApp = () => {
+            let cartData = JSON.parse(localStorage.getItem('cartData') || '{}');
+            let totval=document.getElementById("totamt").innerHTML;
+    const message = `
+        Order Details:\n
+        Amount with Your Products is Rs ${totalAmount}\n
+        Shipping Charges is Rs 50
+        Total amount need to pay is Rs ${totval}
+    `;
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleSendEmail = () => {
+    
+    let totval=document.getElementById("totamt").innerHTML;
+    let cartData = JSON.parse(localStorage.getItem('cartData') || '{}');
+    const subject = "Order Confirmation";
+    const message = `
+        Order Details:
+        Amount with Your Products is ${totalAmount}
+        Total amount need to pay is ${totval}
+    `;
+
+    const mailtoUrl =` mailto:?subject=${subject}&body=${encodeURIComponent(message)}`;
+    window.open(mailtoUrl, '_blank');
+  };
+        change=()=>{
+            console.log('changed')
+            document.getElementById('wha')
+            wha.classList.toggle('whats')
+        }
+        let submit = document.getElementById('address');
+        submit.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+            const formData = {
+                name: document.getElementById('name').value,
+                careOf: document.getElementById('careof').value,
+                mobno: document.getElementById('mobno').value,
+                whatsapp: document.getElementById('whatsapp').checked,
+                wtno: document.getElementById('whatsapp').checked ? document.getElementById('wtno').value : '',
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                address2: document.getElementById('address2').value,
+                pincode: document.getElementById('pincode').value,
+                district: document.getElementById('district').value,
+                state: document.getElementById('state').value,
+                landmark: document.getElementById('landmark').value,
+                country: 'India',
+                products:[]
+            };
+            
+let storedData = localStorage.getItem("orderData");
+    
+    if (storedData) {
+      let data = JSON.parse(storedData); 
+      formData.products.push({
+                name: data.Name,
+                quantity: data.quantity,
+                unitprice: data.price,
+                size: data.size
+
+            });
+            
+            localStorage.setItem('finaldata', JSON.stringify(formData));
+   } else {
+       console.log("No data found in localStorage");
+    }// Prevent the default form submission
+            window.location.href = "otp.html"; // Redirect to otp.html
+        });
+    </script>
+</body>
+</html>

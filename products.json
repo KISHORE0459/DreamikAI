@@ -1,0 +1,43 @@
+{
+    "NameSlip":{
+        "name":"Name Slips",
+        "image":"image/DreamikAILabel-Rectangle-1080x1920px-HD-WhiteBK-CricketTheme-Type1-ImageLeft.png",
+        "productcode":"57a167",
+        "price":250.00,
+        "status":1,
+        "targetpage":"NameSlip/Name_Slip.html",
+        "logo":"image/name slip logo.png",
+        "props":["name slips","label","slips","nameslip","57a167"]
+    },
+    "Bag_Tag":{
+        "name":"Custamizable Bag Tage",
+        "image":"image/bagtag.jpeg",
+        "productcode":"699a2d",
+        "price":250.00,
+        "status":1,
+        "targetpage":"BagTag/bagtag.html",
+        "logo":"image/bagtag logo.jpg",
+        "props":["bag tag","tag","bag","slip","699a2d"]
+    },
+    "Posters":{
+        "name":"Custamizable Posters",
+        "image":"image/poster.jpeg",
+        "productcode":"699d2b",
+        "price":300.00,
+        "status":1,
+        "targetpage":"Poster/Poster.html",
+        "logo":"image/poster logo.png",
+        "props":["custamizable posters","poster","posters","699d2b"]
+    },
+    "Sticker":{
+        "name":"Custamizable Stickers",
+        "image":"image/sticker_image/sticker.png",
+        "productcode":"5e10bf",
+        "price":100.00,
+        "status":1,
+        "targetpage":"Sticker/Sticker.html",
+        "logo":"image/sticker_image/sticker_logo.png",
+        "props":["sticker","logo","custamize","5e10bf"]
+    }
+
+}
